@@ -3,7 +3,7 @@ const API_KEY = "d752e046a9268238157ca8971cc96b61";
 
 async function fetchWithErrorHandling(url = "", config = {}) {
   const response = await fetch(url, config);
-  return response.ok
+  return response.ok  
     ? await response.json()
     : Promise.reject(new Error("Not found"));
 }
